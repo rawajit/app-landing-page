@@ -1,0 +1,103 @@
+---
+title: الأسعار
+heading: اختر الخطة الأفضل لمشروعك
+description: تتضمن جميع الباقات حل تحسين المبيعات الحائز على جوائز لتتبع مبيعاتك في الوقت الفعلي.
+pricing_table:
+  - name: الخطة الأساسية
+    color: "#8e8e8e"
+    features:
+      - text: $49 شهريًا
+        highlight: true
+      - text: إدارة الموارد البشرية الأساسية
+        highlight: false
+      - text: إدارة المشاريع الأساسية
+        highlight: false
+      - text: إدارة المالية والمحاسبة الأساسية
+        highlight: false
+      - text: إدارة الأصول الأساسية
+        highlight: false
+      - text: تقارير وتحليلات أساسية
+        highlight: false
+      - text: دعم فني عبر البريد الإلكتروني
+        highlight: false
+    call_to_action:
+      link: #
+      text: ابدأ الآن
+  - name: الخطة المتقدمة
+    color: "#4a4a4a"
+    features:
+      - text: $99 شهريًا
+        highlight: true
+      - text: جميع مزايا الخطة الأساسية
+        highlight: false
+      - text: إدارة العلاقات مع العملاء (CRM)
+        highlight: false
+      - text: إدارة المخزون المتقدمة
+        highlight: false
+      - text: تقارير وتحليلات متقدمة
+        highlight: false
+      - text: تكامل مع التطبيقات الأخرى
+        highlight: false
+      - text: دعم فني عبر البريد الإلكتروني والهاتف
+        highlight: false
+    call_to_action:
+      link: #
+      text: ابدأ الآن
+  - name: الخطة الاحترافية
+    color: "#000000"
+    features:
+      - text: $199 شهريًا
+        highlight: true
+      - text: جميع مزايا الخطة المتقدمة
+        highlight: false
+      - text: أمان بيانات متقدم
+        highlight: false
+      - text: واجهة مستخدم قابلة للتخصيص
+        highlight: false
+      - text: دعم فني على مدار الساعة
+        highlight: false
+      - text: تدريب مخصص للموظفين
+        highlight: false
+      - text: أدوات تحليلية متقدمة وتقارير مخصصة
+        highlight: false
+    call_to_action:
+      link: #
+      text: ابدأ الآن  
+faq:
+  - question: ما هي أنواع الدفع التي تقبلونها؟
+    answer: بطاقات الائتمان بما في ذلك ماستر كارد أو فيزا أو أمريكان إكسبريس. 
+  - question: هل يمكنني تغيير خطتي في وقت لاحق؟
+    answer: نعم، يمكنك ترقية باقتك أو تخفيضها في أي وقت.
+  - question: هل تقدمون أسعاراً خاصة للمنظمات غير الربحية؟
+    answer: نعم، أرسل لنا رسالة وسنقوم بإعداد أسعارنا غير الربحية.
+  - question: هل من أسئلة؟
+    answer: تواصل معنا لنجيبك على كل أسئلتك.
+---
+<div class="plans">
+	{% for plan in page.pricing_table %}
+		<ul class="plan">
+			<li style="background: {{ plan.color }}">
+				<h3>{{ plan.name }}</h3>
+			</li>
+			{% for feature in plan.features %}
+				<li {% if feature.highlight %} class="highlighted"{% endif %}><?xml version="1.0" ?>{{ feature.text }}</li>
+			{% endfor %}
+
+			{% if plan.call_to_action %}
+				<li class="pricing-cta"><div class="button"><a style="background: {{ plan.color }}" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &larr;</a></div></li>
+			{% endif %}
+		</ul>
+	{% endfor %}
+</div>
+
+{% if page.faq %}
+	<h2>الأسئلة الشائعة</h2>
+	<dl class="faq">
+		{% for item in page.faq %}
+			<div>
+				<dt>{{ item.question }}</dt>
+				<dd>{{ item.answer }}</dd>
+			</div>
+		{% endfor %}
+	</dl>
+{% endif %}

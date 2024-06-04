@@ -1,0 +1,34 @@
+- links:
+  - name: الأسعار
+    link: /pricing/
+  - name: المدونة
+    link: /blog/
+  - name: حولنا
+    link: /about/
+  - name: اتصل بنا
+    link: /contact/
+- links:
+  - name: تسجيل الدخول
+    link: /
+    new_window: false
+  - name: اشتراك
+    link: /
+    new_window: false
+
+- links:
+  - name: Facebook
+    link: https://www.facebook.com/rawaj.info.tech/
+    new_window: true
+    social_icon: Facebook
+  - name: X
+    link: https://x.com/rawaj_it
+    social_icon: Twitter
+    new_window: true
+  - name: LinkedIn
+    link: https://www.linkedin.com/company/rawaj-it
+    social_icon: LinkedIn
+    new_window: true
+  - name: Instagram
+    link: https://www.instagram.com/rawaj_it/
+    social_icon: Instagram
+    new_window: false

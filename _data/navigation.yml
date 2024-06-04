@@ -1,0 +1,24 @@
+- name: الأسعار
+  link: /pricing/
+  new_window: false
+  highlight: false
+- name: المدونة
+  link: /blog/
+  new_window: false
+  highlight: false
+- name: حولنا
+  link: /about/
+  new_window: false
+  highlight: false
+- name: اتصل بنا
+  link: /contact/
+  new_window: false
+  highlight: false
+- name: تسجيل الدخول
+  link: /
+  new_window: false
+  highlight: false
+- name: اشتراك
+  link: /
+  new_window: false
+  highlight: true

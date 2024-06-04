@@ -1,0 +1,16 @@
+---
+title: فريقنا
+description: >-
+ تأسست شركتنا بهدف تقديم حلول تقنية مبتكرة للشركات من جميع الأحجام. نحن نؤمن بأن التكنولوجيا هي المفتاح لتحقيق الكفاءة والنجاح في الأعمال. لذا، نركز على تطوير أنظمة إدارة متكاملة تسهل عمليات الشركات وتعزز أداءها. من خلال خبرتنا العميقة وفريقنا المتميز، نسعى لنكون الشريك الأمثل لنجاح عملائنا.
+---
+
+
+<ul class="staff">
+	{% for person in site.staff_members %}
+		<li>
+			<div class="square-image"><img src="{% include relative-src.html src=person.image_path %}" alt="{{ person.name }}"/></div>
+			<div class="name">{{ person.name }}</div>
+			<div class="position">{{ person.position }}</div>
+		</li>
+	{% endfor %}
+</ul>
